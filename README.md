@@ -1,4 +1,4 @@
-# TDD React Weekly Activity - Build Server Backed GMDB Front End
+# TDD React Weekly Activity - Build Server GMDB Front End
 
 ## Objectives
     - Test Drive a connected CRUD React app using the relevant testing libraries (Cypress, Jest)
