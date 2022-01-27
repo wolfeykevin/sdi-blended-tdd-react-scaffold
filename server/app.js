@@ -15,9 +15,9 @@ const movies = JSON.parse(fs.readFileSync("movies.JSON"))
 app.get('/movies', (req, res) => res.json(movies))
 app.get('/movies/:movieId', (req, res) => res.send(movies.find(movie => movie.movieId === +req.params.movieId)))
 
-app.get('/search',(req,res) => {
+app.get('/movies',(req,res) => {
     const query = decodeURIComponent(req.query.search)
-    const filteredMovies = movies.filter(movie => movie.title.toLowerCase().includes(query))
+    const filteredMovies = movies.filter(movie => movie.title.toLowerCase().includes(query.toLowerCase()))
 
     res.send(filteredMovies)
 });
